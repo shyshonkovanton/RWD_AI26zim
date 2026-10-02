@@ -4,54 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wydarzenia w mieście – karta wydarzenia</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  <header class="site-header">
-    <h1>Wydarzenia w mieście</h1>
-    <p>Trzy najbliższe wydarzenia. Ćwiczenie z responsywnego projektowania.</p>
+<body class="bg-slate-100 text-slate-800 font-sans p-6">
+  <header class="max-w-6xl mx-auto mb-8 text-center">
+    <h1 class="text-3xl font-bold mb-2">Wydarzenia w mieście</h1>
+    <p class="text-slate-600">Trzy najbliższe wydarzenia. Ćwiczenie z responsywnego projektowania.</p>
   </header>
 
-  <main>
-    <section class="cards" aria-label="Lista wydarzeń">
+  <main class="max-w-6xl mx-auto">
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="Lista wydarzeń">
 
-      <article class="card">
-        <img src="img/wydarzenie-1.svg" alt="Ilustracja: koncert w sali kameralnej" width="600" height="400">
-        <div class="card__body">
-          <p class="card__tag">Koncert</p>
-          <h2 class="card__title">Wieczór z muzyką filmową</h2>
-          <p class="card__meta"><time datetime="2026-10-17T19:00">17 października 2026, 19:00</time> · Sala Kameralna</p>
-          <p>Orkiestra kameralna wykona fragmenty najsłynniejszych ścieżek dźwiękowych.</p>
-          <a class="card__link" href="#">Szczegóły i bilety</a>
+      <!-- Karta 1 -->
+      <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+        <img class="w-full h-48 object-cover" src="img/wydarzenie-1.svg" alt="Ilustracja: koncert w sali kameralnej" width="600" height="400">
+        <div class="p-6 flex flex-col flex-grow">
+          <p class="text-amber-600 font-bold text-xs uppercase tracking-wider mb-1">Koncert</p>
+          <h2 class="text-xl font-bold mb-2">Wieczór z muzyką filmową</h2>
+          <p class="text-sm text-slate-500 mb-3"><time datetime="2026-10-17T19:00">17 października 2026, 19:00</time> · Sala Kameralna</p>
+          <p class="text-slate-600 mb-6 flex-grow">Orkiestra kameralna wykona fragmenty najsłynniejszych ścieżek dźwiękowych.</p>
+          <a class="inline-block text-center bg-blue-900 text-white font-medium px-4 py-2 rounded hover:bg-amber-600 transition-colors" href="#">Szczegóły i bilety</a>
         </div>
       </article>
 
-      <article class="card">
-        <img src="img/wydarzenie-2.svg" alt="Ilustracja: wystawa fotografii w galerii" width="600" height="400">
-        <div class="card__body">
-          <p class="card__tag">Wystawa</p>
-          <h2 class="card__title">Miasto nocą: fotografia</h2>
-          <p class="card__meta"><time datetime="2026-10-24T12:00">24 października 2026, 12:00</time> · Galeria Główna</p>
-          <p>Prace lokalnych fotografów: ulice, tramwaje i okna po zmroku.</p>
-          <a class="card__link" href="#">Szczegóły i bilety</a>
+      <!-- Karta 2 -->
+      <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+        <img class="w-full h-48 object-cover" src="img/wydarzenie-2.svg" alt="Ilustracja: wystawa fotografii w galerii" width="600" height="400">
+        <div class="p-6 flex flex-col flex-grow">
+          <p class="text-amber-600 font-bold text-xs uppercase tracking-wider mb-1">Wystawa</p>
+          <h2 class="text-xl font-bold mb-2">Miasto nocą: fotografia</h2>
+          <p class="text-sm text-slate-500 mb-3"><time datetime="2026-10-24T12:00">24 października 2026, 12:00</time> · Galeria Główna</p>
+          <p class="text-slate-600 mb-6 flex-grow">Prace lokalnych fotografów: ulice, tramwaje i okna po zmroku.</p>
+          <a class="inline-block text-center bg-blue-900 text-white font-medium px-4 py-2 rounded hover:bg-amber-600 transition-colors" href="#">Szczegóły i bilety</a>
         </div>
       </article>
 
-      <article class="card">
-        <img src="img/wydarzenie-3.svg" alt="Ilustracja: warsztaty ceramiczne" width="600" height="400">
-        <div class="card__body">
-          <p class="card__tag">Warsztaty</p>
-          <h2 class="card__title">Ceramika dla początkujących</h2>
-          <p class="card__meta"><time datetime="2026-11-07T10:00">7 listopada 2026, 10:00</time> · Pracownia 2</p>
-          <p>Trzy godziny pracy z gliną. Wszystkie materiały na miejscu.</p>
-          <a class="card__link" href="#">Zapisz się</a>
+      <!-- Karta 3 -->
+      <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+        <img class="w-full h-48 object-cover" src="img/wydarzenie-3.svg" alt="Ilustracja: warsztaty ceramiczne" width="600" height="400">
+        <div class="p-6 flex flex-col flex-grow">
+          <p class="text-amber-600 font-bold text-xs uppercase tracking-wider mb-1">Warsztaty</p>
+          <h2 class="text-xl font-bold mb-2">Ceramika dla początkujących</h2>
+          <p class="text-sm text-slate-500 mb-3"><time datetime="2026-11-07T10:00">7 listopada 2026, 10:00</time> · Pracownia 2</p>
+          <p class="text-slate-600 mb-6 flex-grow">Trzy godziny pracy z gliną. Wszystkie materiały na miejscu.</p>
+          <a class="inline-block text-center bg-blue-900 text-white font-medium px-4 py-2 rounded hover:bg-amber-600 transition-colors" href="#">Zapisz się</a>
         </div>
       </article>
 
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="max-w-6xl mx-auto mt-12 text-center text-sm text-slate-400">
     <p>Projekt dydaktyczny. Wydarzenia są fikcyjne.</p>
   </footer>
 </body>
