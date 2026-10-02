@@ -7,13 +7,16 @@
    TODO: ustaw w :root kolory, odstępy i rozmiar bazowy.
    TODO: ustaw box-sizing: border-box dla wszystkich elementów.
    TODO: ustaw czcionkę i kolor tekstu w body (przykład: system-ui). */
-:root {
-  --kolor-glowny: #1f3b65;
-  --kolor-akcent: #e9a23b;
-  --kolor-tlo: #f3f5f8;
-  --kolor-tekst: #1a2433;
-  --odstep: 1rem;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: sans-serif;
+  background-color: #f3f5f8;
+  color: #1a2433;
+}
+
 
 /* ETAP 2: wygląd karty (mobile-first, jedna kolumna) ---------------------
    TODO: .card: tło, zaokrąglenie, cień, overflow: hidden.
@@ -22,12 +25,59 @@
    TODO: .card__tag: mała etykieta (wielkie litery, kolor akcentu).
    TODO: .card__title: rozmiar z clamp(), np. clamp(1.1rem, 2.5vw, 1.5rem).
    TODO: .card__link: wygląd przycisku; dodaj :hover i :focus-visible. */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card__body {
+  padding: 1rem;
+}
+.card__tag {
+  color: #e9a23b;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.card__title {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin: 0 0 0.5rem 0;
+}
+
+.card__link {
+  display: inline-block;
+  background-color: #1f3b65;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.card__link:hover,
+.card__link:focus-visible {
+  background-color: #e9a23b;
+}
 
 /* ETAP 3: układ wielu kart (responsywność) -------------------------------
    TODO: .cards jako Grid z odstępem.
    TODO: kolumny z auto-fit i minmax, np.
          grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
    TODO: sprawdź w narzędziach deweloperskich szerokości 360, 768 i 1280 px. */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
 
 /* ETAP 4 (dla chętnych) ---------------------------------------------------
    TODO: tryb ciemny: @media (prefers-color-scheme: dark) { ... }
